@@ -16,10 +16,25 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <router-link style="text-decoration: none; color: grey" to="/"
+              >Home</router-link
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <router-link
+              style="text-decoration: none; color: grey"
+              to="/products"
+              >Products</router-link
+            >
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <router-link class="nav-link" to="/cart"
+              >Cart
+              <b-icon-bag></b-icon-bag>
+              <span class="badge bg-info ml-2">0</span>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -36,5 +51,8 @@ export default {
 <style>
 .navbar {
   margin-bottom: 150px;
+}
+.router-link-exact-active {
+  font-weight: bold;
 }
 </style>
